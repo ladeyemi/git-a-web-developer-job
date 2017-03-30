@@ -1,0 +1,11 @@
+.row {
+  &__4 {
+    float: left;
+    width: 33.3%:
+  }
+
+  &__8 {
+    float: left;
+    width: 66.6%
+  }
+}
