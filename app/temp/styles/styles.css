@@ -475,6 +475,10 @@ img {
   box-sizing: border-box;
 }
 
+a {
+  color: #d59541;
+}
+
 .large-hero {
   border-bottom: 10px solid #2f5572;
   position: relative;
@@ -567,7 +571,7 @@ img {
   overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
-  max-width: 1200px;
+  max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -659,6 +663,10 @@ img {
   margin-bottom: 1.6em;
 }
 
+.headline--no-t-margin {
+  margin-top: 0;
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -692,4 +700,14 @@ img {
   .row__medium-8--smaller {
     width: 63%;
   }
+}
+
+.generic-content-container p {
+  line-height: 1.65;
+  font-size: 1.125rem;
+  margin: 1.8rem 0;
+}
+
+.generic-content-container p a {
+  font-weight: 700;
 }
