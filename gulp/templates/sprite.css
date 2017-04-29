@@ -9,6 +9,10 @@ Instead edit gulp/templates/sprite */
     background-image: url('/assets/images/sprites/{{{sprite}}}');
   }
 
+  .no-svg .icon {
+    background-image: url('/assets/images/sprites/{{#replaceSVGWithPng}}{{{sprite}}}{{/replaceSVGWithPng}}');
+  }
+
   {{/first}}
 
 
