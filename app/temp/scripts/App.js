@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11164,39 +11164,39 @@ var Modal = function () {
   function Modal() {
     _classCallCheck(this, Modal);
 
-    this.openModalButton = (0, _jquery2.default)('.open-modal');
-    this.modal = (0, _jquery2.default)('.modal');
-    this.closeModalButton = (0, _jquery2.default)('.modal__close');
+    this.openModalButton = (0, _jquery2.default)(".open-modal");
+    this.modal = (0, _jquery2.default)(".modal");
+    this.closeModalButton = (0, _jquery2.default)(".modal__close");
     this.events();
   }
 
   _createClass(Modal, [{
-    key: 'events',
+    key: "events",
     value: function events() {
+      // clicking the open modal button
       this.openModalButton.click(this.openModal.bind(this));
-      //clicking the open modal button
-      //
-      //clicking the x close modal button
+
+      // clicking the x close modal button
       this.closeModalButton.click(this.closeModal.bind(this));
 
-      //pushes any key
+      // pushes any key
       (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
     }
   }, {
-    key: 'keyPressHandler',
+    key: "keyPressHandler",
     value: function keyPressHandler(e) {
       if (e.keyCode == 27) {
         this.closeModal();
       }
     }
   }, {
-    key: 'openModal',
+    key: "openModal",
     value: function openModal() {
       this.modal.addClass("modal--is-visible");
       return false;
     }
   }, {
-    key: 'closeModal',
+    key: "closeModal",
     value: function closeModal() {
       this.modal.removeClass("modal--is-visible");
     }
@@ -11290,7 +11290,7 @@ var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(9);
+var _jquerySmoothScroll = __webpack_require__(11);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11316,7 +11316,7 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: 'refreshWaypoints',
     value: function refreshWaypoints() {
-      this.lazyImages.load(function () {
+      this.lazyImages.on("load", function () {
         Waypoint.refreshAll();
       });
     }
@@ -11380,7 +11380,9 @@ exports.default = StickyHeader;
 
 /***/ }),
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11417,8 +11419,8 @@ var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
 
 /***/ }),
-/* 8 */,
-/* 9 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
